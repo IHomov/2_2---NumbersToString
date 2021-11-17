@@ -72,7 +72,7 @@ function ConvertToWords(num) {
 
 }
 function Hrn(n) {
-    let last_num = parseFloat(n.substr(-1));
+    let last_num = n.substr(-2);
     let name;
     if (last_num == 1) {
             name = ' гривня';
