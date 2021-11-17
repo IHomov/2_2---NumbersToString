@@ -1,4 +1,4 @@
-let aHoundred = [ " ", "сто", "двісті", "триста", "чотириста", "п'ятсот", "шістьсот", "сімсот", "вісімсот", "дев'ятьсот"];
+let aHoundred = [ " ", "сто", "двісті", "триста", "чотириста", "п'ятсот", "шістьсот", "сімсот", "вісімсот", "дев'ятсот"];
 
 let aTens = ["", "", "двадцять", "тридцять", "сорок", "п'ятьдесят", "шістьдесят", "сімдесят", "вісімдесят", "дев'яносто"];
 
@@ -57,12 +57,12 @@ function ConvertToWords(num) {
                 out = aHoundred[inputNumber[0]] + " " + aOnes[sum];
                 
             } 
-            else { 123
+            else { 
                 if (inputNumber[2] != 0) {
                             out = aHoundred[inputNumber[0]] + " " + aTens[inputNumber[1]] + " " + aOnes[inputNumber[2]];
                         }
                         else {
-                            out = aHoundred[inputNumber[0]] + " " + aTens[inputNumber[2]] ;
+                            out = aHoundred[inputNumber[0]] + " " + aTens[inputNumber[1]] ;
                         }
             }
     
@@ -72,12 +72,13 @@ function ConvertToWords(num) {
 
 }
 function Hrn(n) {
+    let last_num = parseFloat(n.substr(-1));
     let name;
-    if (n == 1) {
+    if (last_num == 1) {
             name = ' гривня';
         }
             
-            else if (n > 1 && n < 5) {
+            else if (last_num > 1 && last_num < 5) {
                 name = ' гривні';
             }
         
@@ -86,6 +87,9 @@ function Hrn(n) {
     }
     return name;
 }
+
+
+
 
 
 
