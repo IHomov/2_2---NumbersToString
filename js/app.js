@@ -21,9 +21,9 @@ function convertnumbertostring(){
     function ConvertToWords(num) {
             let out = 0;
             let inputNumber = num.split('');
-            console.log(inputNumber);
+            
 
-    if (num.lenght == 1) { // числа от 1 то 9 включительно
+    if (num.length == 1) { // числа от 1 то 9 включительно
         out = aOnes[num];
     }
 
